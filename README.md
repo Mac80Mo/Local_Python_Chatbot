@@ -79,7 +79,7 @@ Anschließend kannst du in einem interaktiven Dialog mit dem AI-Modell **llama3*
 ## Anpassung
 
 Falls du den Chatbot weiter anpassen möchtest, kannst du:
-- Die Prompt-Vorlagen in `chatbot.py` verändern
+- Die Prompt-Vorlagen in `main.py` verändern
 - Den Speichermechanismus für den Gesprächsverlauf erweitern oder anpassen
 - Weitere Features hinzufügen, wie z. B. eine GUI oder eine API-Schnittstelle
 
