@@ -17,13 +17,14 @@ Dieses Repository enthält einen einfachen AI-Chatbot, der in Python entwickelt 
 
 ## Über das Projekt
 
-Der ChatBot ermöglicht es, in einem fortlaufenden Gespräch Fragen zu stellen und Antworten vom AI-Modell zu erhalten. Der bisherige Gesprächsverlauf wird gespeichert und als Kontext an das Modell übergeben, um konsistente Antworten zu generieren.
+Dieses Projekt ist mein erster Kontakt mit **OllamaLLM** und stellt einen **lokalen Chatbot** auf Grundlage des Sprachmodells **llama3** dar. Der ChatBot ermöglicht es, in einem fortlaufenden Gespräch Fragen zu stellen und Antworten vom AI-Modell zu erhalten. Der bisherige Gesprächsverlauf wird gespeichert und als Kontext an das Modell übergeben, um konsistente Antworten zu generieren.
 
 ## Features
 
 - **Interaktiver Chat:** Nutze den Chatbot in der Kommandozeile.
 - **Gesprächsverlauf:** Der bisherige Verlauf wird gespeichert und in zukünftigen Anfragen berücksichtigt.
 - **Einfache Einrichtung:** Mit virtueller Umgebung und klaren Setup-Anweisungen.
+- **Lokal ausführbar:** Kein externer API-Zugriff notwendig – alle Berechnungen laufen lokal auf deinem Gerät.
 
 ## Voraussetzungen
 
@@ -31,6 +32,7 @@ Der ChatBot ermöglicht es, in einem fortlaufenden Gespräch Fragen zu stellen u
 - Eine funktionierende Installation der folgenden Module:
   - `langchain_ollama`
   - `langchain_core`
+  - `ollama`
 
 ## Installation
 
@@ -38,8 +40,54 @@ Der ChatBot ermöglicht es, in einem fortlaufenden Gespräch Fragen zu stellen u
 
 Um sicherzustellen, dass alle benötigten Abhängigkeiten isoliert installiert werden, wird empfohlen, eine virtuelle Umgebung zu nutzen.
 
-**Aktivieren der virtuellen Umgebung:**
+**Erstellen und Aktivieren der virtuellen Umgebung:**
 
 Unter Windows:
 ```bash
-.\chatbot\Scripts\activate
+python -m venv chatbot          # Erstellen
+.\chatbot\Scripts\activate      # Aktivieren
+```
+
+Unter Linux/macOS:
+```bash
+python3 -m venv chatbot
+source chatbot/bin/activate
+```
+
+### Abhängigkeiten installieren
+
+```bash
+pip install langchain_ollama langchain_core ollama
+```
+
+## Verwendung
+
+Nach der erfolgreichen Installation kann der Chatbot über die Kommandozeile gestartet werden:
+
+```bash
+python main.py
+```
+
+Anschließend kannst du in einem interaktiven Dialog mit dem AI-Modell **llama3** chatten.
+
+## Code-Übersicht
+
+- **`chatbot.py`** – Hauptskript zum Starten des Chatbots
+- **`requirements.txt`** – Enthält die benötigten Abhängigkeiten
+- **`README.md`** – Diese Dokumentation
+
+## Anpassung
+
+Falls du den Chatbot weiter anpassen möchtest, kannst du:
+- Die Prompt-Vorlagen in `chatbot.py` verändern
+- Den Speichermechanismus für den Gesprächsverlauf erweitern oder anpassen
+- Weitere Features hinzufügen, wie z. B. eine GUI oder eine API-Schnittstelle
+
+## Lizenz
+
+Dieses Projekt ist unter der MIT-Lizenz veröffentlicht. Weitere Details findest du in der Datei `LICENSE`.
+
+---
+
+Falls du Fragen oder Anregungen hast, freue ich mich über Feedback!
+
