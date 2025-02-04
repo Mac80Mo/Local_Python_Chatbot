@@ -1,0 +1,15 @@
+# Virtuelle Umgebung ignorieren
+venv/
+chatbot/
+
+# Temporäre Dateien ignorieren
+*.log
+*.tmp
+
+# Betriebssystem-spezifische Dateien ignorieren
+.DS_Store       # macOS
+Thumbs.db       # Windows
+
+# Python spezifische Dateien ignorieren
+__pycache__/
+*.pyc
