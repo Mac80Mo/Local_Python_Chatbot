@@ -1,19 +1,45 @@
-# Python-Chatbot mit LangChain und Ollama
+# AI ChatBot mit OllamaLLM
 
-Dieses Projekt zeigt, wie ein einfacher Python-Chatbot mit der Bibliothek **LangChain** und einem Modell von **Ollama** (hier: `llama3`) implementiert wird. Das Programm führt eine Anfrage an das Modell durch und gibt die Antwort aus.
+Dieses Repository enthält einen einfachen AI-Chatbot, der in Python entwickelt wurde. Der Chatbot verwendet das Sprachmodell **llama3** über die [OllamaLLM](https://github.com/ollama/ollama-python) Schnittstelle und nutzt [LangChain](https://github.com/hwchase17/langchain) zur Verwaltung von Prompt-Templates und Modellinteraktionen.
+
+## Inhaltsverzeichnis
+
+- [Über das Projekt](#über-das-projekt)
+- [Features](#features)
+- [Voraussetzungen](#voraussetzungen)
+- [Installation](#installation)
+  - [Virtuelle Umgebung](#virtuelle-umgebung)
+  - [Abhängigkeiten installieren](#abhängigkeiten-installieren)
+- [Verwendung](#verwendung)
+- [Code-Übersicht](#code-übersicht)
+- [Anpassung](#anpassung)
+- [Lizenz](#lizenz)
+
+## Über das Projekt
+
+Der ChatBot ermöglicht es, in einem fortlaufenden Gespräch Fragen zu stellen und Antworten vom AI-Modell zu erhalten. Der bisherige Gesprächsverlauf wird gespeichert und als Kontext an das Modell übergeben, um konsistente Antworten zu generieren.
+
+## Features
+
+- **Interaktiver Chat:** Nutze den Chatbot in der Kommandozeile.
+- **Gesprächsverlauf:** Der bisherige Verlauf wird gespeichert und in zukünftigen Anfragen berücksichtigt.
+- **Einfache Einrichtung:** Mit virtueller Umgebung und klaren Setup-Anweisungen.
 
 ## Voraussetzungen
 
-Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind, bevor Sie das Projekt ausführen:
-
-1. **Python 3.7 oder höher** ist installiert.
-2. **Virtuelle Umgebung (venv)** ist eingerichtet.
-3. **LangChain** und **Ollama-Integration** sind installiert.
+- Python 3.6 oder höher
+- Eine funktionierende Installation der folgenden Module:
+  - `langchain_ollama`
+  - `langchain_core`
 
 ## Installation
 
-### 1. Virtuelle Umgebung erstellen und aktivieren
+### Virtuelle Umgebung
 
-1. Erstellen Sie eine virtuelle Umgebung:
-   ```bash
-   python -m venv chatbot
+Um sicherzustellen, dass alle benötigten Abhängigkeiten isoliert installiert werden, wird empfohlen, eine virtuelle Umgebung zu nutzen.
+
+**Aktivieren der virtuellen Umgebung:**
+
+Unter Windows:
+```bash
+.\chatbot\Scripts\activate
