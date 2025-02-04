@@ -72,7 +72,7 @@ Anschließend kannst du in einem interaktiven Dialog mit dem AI-Modell **llama3*
 
 ## Code-Übersicht
 
-- **`chatbot.py`** – Hauptskript zum Starten des Chatbots
+- **`main.py`** – Hauptskript zum Starten des Chatbots
 - **`requirements.txt`** – Enthält die benötigten Abhängigkeiten
 - **`README.md`** – Diese Dokumentation
 
