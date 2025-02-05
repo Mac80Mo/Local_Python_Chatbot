@@ -22,7 +22,7 @@ from langchain_core.prompts import ChatPromptTemplate
 # Das Template bestimmt, wie die Eingaben (z. B. der bisherige Gesprächsverlauf 
 # und die aktuelle Frage) in den Prompt eingebunden werden.
 template = """
-Answer the question below.
+Answer the question below in German. Keep it short and simple.
 
 Here ist the conversation history: {context}
 
@@ -58,12 +58,12 @@ def handle_conversation():
     # Initialisieren des Kontexts (Gesprächsverlaufs), zunächst leer.
     context = ""
     # Ausgabe einer Begrüßungsnachricht an den Benutzer.
-    print("Welcome to the AI ChatBot! Type 'exit' to quit.")
+    print("Wilkommen zum lokalen AI (llama) ChatBot! Tippe 'exit' zum beenden.")
     
     # Endlosschleife, die das fortlaufende Gespräch steuert.
     while True:
         # Abfrage der Benutzereingabe.
-        user_input = input("You: ")
+        user_input = input("Du: ")
         
         # Überprüfen, ob der Benutzer das Gespräch beenden möchte.
         if user_input.lower() == "exit":
